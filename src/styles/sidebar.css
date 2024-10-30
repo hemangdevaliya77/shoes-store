@@ -1,0 +1,30 @@
+/* sidebar.css */
+
+.sidebar {
+    width: 200px; /* Set the width of the sidebar */
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 20px; /* Padding inside the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    position: fixed; /* Keep it fixed on the side */
+    height: 100%; /* Full height */
+}
+
+.shoes-types {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.shoes-types li {
+    margin: 10px 0; /* Space between items */
+}
+
+.shoes-types li a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark text color */
+    font-weight: bold; /* Bold text */
+}
+
+.shoes-types li a:hover {
+    color: #007bff; /* Change color on hover */
+}

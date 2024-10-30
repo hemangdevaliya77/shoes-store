@@ -1,0 +1,41 @@
+.shoes-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    list-style-type: none;
+  }
+  
+  .shoe-item {
+    width: 300px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .shoe-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .shoe-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .shoe-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .shoe-item p {
+    font-size: 0.9em;
+    color: #777;
+    margin: 5px 0 15px;
+  }
+  

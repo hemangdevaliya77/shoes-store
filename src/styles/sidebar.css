@@ -1,30 +1,177 @@
 /* sidebar.css */
 
+/* sidebar.css */
+
 .sidebar {
-    width: 200px; /* Set the width of the sidebar */
-    background-color: #f4f4f4; /* Light gray background */
-    padding: 20px; /* Padding inside the sidebar */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    position: fixed; /* Keep it fixed on the side */
+    width: 250px; /* Fixed width for large screens */
+    background-color: #f8f9fa; /* Light background color */
     height: 100%; /* Full height */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    transition: transform 0.3s ease; /* Smooth transition for opening/closing */
+    z-index: 1000; /* Ensure it sits on top */
+}
+.main-container{
+    margin-left: 10%;
+}
+
+/* Hide sidebar on small screens by default */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%); /* Hide the sidebar off-screen */
+    }
+
+}
+
+.sidebar.open {
+    transform: translateX(0); /* Slide in when open */
 }
 
 .shoes-types {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margin */
 }
 
 .shoes-types li {
-    margin: 10px 0; /* Space between items */
+    padding: 10px; /* Space around links */
+    margin: 20px;
 }
 
 .shoes-types li a {
-    text-decoration: none; /* Remove underline */
-    color: #333; /* Dark text color */
-    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Dark color for text */
 }
 
+/* Hover effect for links */
 .shoes-types li a:hover {
     color: #007bff; /* Change color on hover */
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
+    .sidebar {
+        width: 250px; /* Keep fixed width for larger devices */
+    }
+}
+
+/* Styles for tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Adjust width for tablets */
+    }
+    .main-container{
+        margin-left: 0;
+    }
+}
+
+.sidebar-toggle {
+    display: none; /* Hide by default */
+    position: absolute; /* Position relative to sidebar */
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Position outside the sidebar */
+    z-index: 1001; /* Above sidebar */
+}
+
+/* Show toggle button on small devices */
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block; /* Show button on small screens */
+      top: 10;
+      left: 5px;
+    }
+    .shoes-types  {
+      margin-top: 100px;
+    }
+    .heading{
+        font-size: 30px;
+        margin-left: 100px;
+    }
+   
+    
+    
+}
+
+
+
+
+
+.main-container {
+    margin-left: 10%; /* Default margin for large screens */
+}
+
+/* Hide sidebar on small screens by default */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%); /* Hide the sidebar off-screen */
+    }
+
+    .main-container {
+        margin-left: 0; /* No margin when sidebar is hidden */
+    }
+}
+
+/* When sidebar is open */
+.sidebar.open {
+    transform: translateX(0); /* Slide in when open */
+}
+
+/* Styles for tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Adjust width for tablets */
+    }
+
+    .main-container {
+        margin-left: 200px; /* Margin to accommodate the sidebar */
+    }
+}
+
+/* Styles for iPad and similar tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sidebar {
+        width: 250px; /* Keep fixed width for larger tablets */
+    }
+
+    .main-container {
+        margin-left: 250px; /* Margin to accommodate the sidebar */
+    }
+}
+
+/* Styles for larger devices */
+@media (min-width: 1025px) {
+    .sidebar {
+        width: 250px; /* Fixed width for large screens */
+    }
+
+    .main-container {
+        margin-left: 250px; /* Maintain margin for large devices */
+    }
+}
+
+/* .sidebar-toggle {
+    display: none; 
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    z-index: 1001;  
+} */
+
+/* Show toggle button on small devices */
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block; /* Show button on small screens */
+        top: 10px; /* Position it properly */
+        left: 5px; /* Position it properly */
+    }
+
+    .shoes-types {
+        margin-top: 100px; /* Adjust margin for the list */
+    }
+
+    .heading {
+        font-size: 30px; /* Adjust heading font size */
+        margin-left: 100px; /* Center it when the sidebar is open */
+    }
 }

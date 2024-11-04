@@ -8,18 +8,19 @@
   }
   
   .shoe-item {
-    width: 300px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    width: 500px;
+    /* border: 1px solid #e0e0e0; */
+    /* border-radius: 10px; */
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     text-align: center;
     transition: transform 0.3s;
   }
+ 
   
-  .shoe-item:hover {
+  /* .shoe-item:hover {
     transform: translateY(-5px);
-  }
+  } */
   
   .shoe-item img {
     width: 100%;
@@ -38,4 +39,31 @@
     color: #777;
     margin: 5px 0 15px;
   }
-  
+  .add-cart-btn{
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 7px;
+    width: 50%;
+    cursor: pointer;
+  }
+
+  .add-cart-btn:hover{
+    background-color: #333;
+    color: white;
+    transition: 0.4s;
+  }
+  .cart-items{
+    display: flex;
+    list-style-type: none;
+  }
+  .cart-items img{
+    height: 200px;
+
+
+  }
+  .cart-details{
+    display: grid;
+    margin: 2rem;
+  }

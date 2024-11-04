@@ -1,10 +1,21 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sidebar.css';
 
 function SideBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+    
+  };
   return (
-    <div className='sidebar'>
+    <>
+    
+    <button className="sidebar-toggle" onClick={toggleSidebar}>
+        {isOpen ? 'Close' : 'Open'} Menu
+      </button>
+      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <ul className='shoes-types'>
         <li><Link to="/lifestyle">LifeStyle</Link></li>
         <li><Link to="/jordan">Jordan</Link></li>
@@ -13,6 +24,8 @@ function SideBar() {
         <li><Link to="/training">Training & Gym</Link></li>
       </ul>
     </div>
+    </>
+    
   );
 }
 

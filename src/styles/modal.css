@@ -1,0 +1,83 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is on top */
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    padding: 60px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+h3 {
+    margin: 20px 0 10px;
+}
+
+ul {
+    padding: 0;
+    margin: 0 0 20px;
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px; /* Add spacing between items */
+}
+
+li.style-list-type {
+    list-style-type: none; /* Override default styling for size */
+}
+.close-btn{
+    background-color: black;
+    color: white;
+}
+.close-btn:hover{
+    background-color: black;
+    opacity: 0.7;
+}

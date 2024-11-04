@@ -6,28 +6,33 @@ import Jordan from './pages/Jordan'; // Example component
 import Running from './pages/Running'; // Example component
 import Basketball from './pages/Basketball'; // Example component
 import Training from './pages/Training'; // Example component
+import Navbar from './components/Navbar';
+import Cart from './pages/Cart';
+import './styles/sidebar.css'
 
 
 function App() {
  
   return (
     <>
- <h1 className='heading'>Nike Shoes Store</h1>
- <Router>
+ <Navbar/>
+ <h1 className='heading' >Shoes Store</h1>
+
       <div style={{ display: 'flex' }}>
-        <SideBar />
-        <div style={{ marginLeft: '220px', padding: '20px', flex: 1 }}>
+        <SideBar  />
+        <div style={{ padding: '20px', flex: 1 }} className='main-container'>
           <Routes>
             <Route path="/lifestyle" element={<LifeStyle />} />
             <Route path="/jordan" element={<Jordan />} />
             <Route path="/running" element={<Running />} />
             <Route path="/basketball" element={<Basketball />} />
             <Route path="/training" element={<Training />} />
+            <Route path="/cart" element={<Cart />} />
          
           </Routes>
         </div>
       </div>
-    </Router>
+   
     </>
   )
 }
